@@ -1,0 +1,84 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "g++ release",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "./src/*.cpp",
+          "-std=c++23",
+          "-lGL",
+          "-lm",
+          "-lpthread",
+          "-ldl",
+          "-lrt",
+          "-lX11",
+          "-o",
+          "./bin/gcc_release.out"
+        ],
+        "group": "build",
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "g++ debug",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "./src/*.cpp",
+          "-std=c++23",
+          "-lGL",
+          "-lm",
+          "-lpthread",
+          "-ldl",
+          "-lrt",
+          "-lX11",
+          "-g",
+          "-o",
+          "./bin/gcc_debug.out"
+        ],
+        "group": "build",
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "clang++ release",
+        "type": "shell",
+        "command": "clang++",
+        "args": [
+          "./src/*.cpp",
+          "-std=c++23",
+          "-lGL",
+          "-lm",
+          "-lpthread",
+          "-ldl",
+          "-lrt",
+          "-lX11",
+          "-o",
+          "./bin/clang_release.out"
+        ],
+        "group": "build",
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "clang++ debug",
+        "type": "shell",
+        "command": "clang++",
+        "args": [
+          "./src/*.cpp",
+          "-std=c++23",
+          "-lGL",
+          "-lm",
+          "-lpthread",
+          "-ldl",
+          "-lrt",
+          "-lX11",
+          "-g",
+          "-o",
+          "./bin/clang_debug.out"
+        ],
+        "group": "build",
+        "problemMatcher": "$gcc"
+      }
+    ]
+  }
+  
